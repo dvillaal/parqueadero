@@ -1,0 +1,10 @@
+<div class="flex flex-col gap-2">
+  <label class="text-gray-900 dark:text-gray-100 text-base font-semibold">Placa del Vehículo</label>
+  <input
+    class="w-full rounded-lg border-gray-300 dark:border-gray-700 dark:bg-gray-800 dark:text-white h-14 px-4 text-2xl font-mono uppercase tracking-widest focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"
+    placeholder="E.G. ABC-1234"
+    type="text"
+    (input)="onChange(txtPlate.value)"
+    #txtPlate
+  />
+</div>

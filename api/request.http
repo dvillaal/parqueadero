@@ -55,3 +55,5 @@ Content-Type: application/json
   "placa": "ABC125"
 }
 
+###
+GET http://localhost:8080/parqueadero/activos

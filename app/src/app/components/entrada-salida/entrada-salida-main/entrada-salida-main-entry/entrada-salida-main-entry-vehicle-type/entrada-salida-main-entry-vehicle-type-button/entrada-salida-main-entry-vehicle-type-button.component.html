@@ -1,0 +1,10 @@
+<button
+  class="flex flex-col items-center justify-center p-4"
+  (click)="onSelectVehicleType(tipoVehiculo())"
+  [ngClass]="{
+    'border-primary text-primary transition-all': parkStoreService.getTipoVehiculo() === tipoVehiculo()
+  }"
+>
+  <span class="material-symbols-outlined text-3xl mb-1">{{ icon() }}</span>
+  <span class="text-sm font-bold">{{ label() }}</span>
+</button>

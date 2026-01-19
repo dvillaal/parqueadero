@@ -1,0 +1,15 @@
+<div class="relative mb-8">
+  <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-gray-400">search</span>
+  <p-autocomplete
+    [(ngModel)]="selectedPlaca"
+    [suggestions]="filteredPlacas"
+    (completeMethod)="filterVehicles($event)"
+    appendTo="body"
+    placeholder="Buscar por placa..."
+    styleClass="w-full"
+    inputStyleClass="w-full !pl-12 h-14 !rounded-lg !border !border-gray-300 dark:!border-gray-700 dark:bg-gray-800 dark:text-white text-lg focus:border-primary focus:ring-2 focus:ring-primary/20"
+    panelStyleClass="!w-full !min-w-full pl-12 py-2 !bg-white dark:!bg-gray-800 border border-gray-200 dark:border-gray-700 text-black dark:text-white rounded-md shadow-lg"
+  >
+  </p-autocomplete>
+  <button class="absolute right-2 top-2 h-10 px-4 bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 rounded-md text-sm font-bold transition-colors">Search</button>
+</div>
