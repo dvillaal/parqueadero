@@ -36,4 +36,11 @@ public class ParqueaderoController {
     public ResponseEntity<?> obtenerParqueosActivos() {
         return ResponseEntity.ok(parqueaderoHandler.obtenerParqueosActivos());
     }
+
+    @GetMapping("/cobro")
+    public ResponseEntity<?> obtenerCobro(
+            @RequestParam (required = true) String placa
+    ) {
+        return ResponseEntity.ok(parqueaderoHandler.obtenerCobro(placa));
+    }
 }

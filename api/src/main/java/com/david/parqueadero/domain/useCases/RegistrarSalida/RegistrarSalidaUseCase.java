@@ -26,7 +26,7 @@ public class RegistrarSalidaUseCase {
     public void registrarSalida(String placa) {
         Parqueo parqueoActivo = verificarVehiculoActivoUseCase.verificarVehiculoActivo(placa);
         Parqueo parqueoConTiempo = actualizarTiempoUseCase.actualizarTiempo(parqueoActivo);
-        long horasEstacionamiento = calcularTiempoUseCase.calcularTiempo(parqueoConTiempo);
+        long horasEstacionamiento = calcularTiempoUseCase.calcularTiempo(parqueoConTiempo.getHoraIngreso(), parqueoConTiempo.getHoraSalida());
         BigDecimal cobro = calcularCobroUseCase.calcularCobro(parqueoConTiempo, horasEstacionamiento);
         Parqueo parqueoConCobro = actualizarCobroUseCase.actualizarCobro(parqueoConTiempo, cobro);
         actualizarParqueoUseCase.actualizarParqueo(parqueoConCobro);

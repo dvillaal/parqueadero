@@ -36,4 +36,21 @@ export class ParkService {
     }
   }
 
+  getPaymentAmount(placa: string) {
+      return this.http.get<number>(`${environment.parkApiUrl}/parqueadero/cobro`, {
+        params: {
+          placa: placa
+        }
+      });
+  }
+
+  createExit(placa: string) {
+    try {
+      this.http.post(`${environment.parkApiUrl}/parqueadero/salida`, {
+        placa: placa
+      }).subscribe()
+    } catch (error) {
+      console.error(error);
+    }
+  }
 }

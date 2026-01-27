@@ -27,6 +27,7 @@ public class Parqueo {
         this.id = UUID.randomUUID();
         this.vehiculo = vehiculo;
         this.horaIngreso = horaIngreso;
+        this.valorCobrado = null;
     }
 
     public Vehiculo getVehiculo() {
